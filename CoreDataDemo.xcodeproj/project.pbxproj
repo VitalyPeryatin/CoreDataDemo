@@ -12,7 +12,8 @@
 		D8CBA76A25FA460E002205B5 /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8CBA76825FA460E002205B5 /* CoreDataDemo.xcdatamodeld */; };
 		D8CBA76C25FA4610002205B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CBA76B25FA4610002205B5 /* Assets.xcassets */; };
 		D8CBA76F25FA4610002205B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CBA76D25FA4610002205B5 /* LaunchScreen.storyboard */; };
-		D8CBA77E25FA4C35002205B5 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBA77D25FA4C35002205B5 /* NewTaskViewController.swift */; };
+		D8CBA78425FA8510002205B5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBA78325FA8510002205B5 /* StorageManager.swift */; };
+		D8CBA78C25FAB605002205B5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBA78B25FAB605002205B5 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +24,8 @@
 		D8CBA76B25FA4610002205B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8CBA76E25FA4610002205B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8CBA77025FA4611002205B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8CBA77D25FA4C35002205B5 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		D8CBA78325FA8510002205B5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		D8CBA78B25FAB605002205B5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		D8CBA75E25FA460E002205B5 /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D8CBA75F25FA460E002205B5 /* AppDelegate.swift */,
-				D8CBA76325FA460E002205B5 /* TaskListViewController.swift */,
-				D8CBA76B25FA4610002205B5 /* Assets.xcassets */,
-				D8CBA76D25FA4610002205B5 /* LaunchScreen.storyboard */,
-				D8CBA77025FA4611002205B5 /* Info.plist */,
-				D8CBA76825FA460E002205B5 /* CoreDataDemo.xcdatamodeld */,
-				D8CBA77D25FA4C35002205B5 /* NewTaskViewController.swift */,
+				D8CBA78625FA879F002205B5 /* ViewControllers */,
+				D8CBA78225FA84F5002205B5 /* Models */,
+				D8CBA78125FA84EC002205B5 /* Service */,
+				D8CBA78725FA87B0002205B5 /* SupportingFiles */,
+				D8CBA78925FA87D3002205B5 /* Resources */,
 			);
 			path = CoreDataDemo;
+			sourceTree = "<group>";
+		};
+		D8CBA78125FA84EC002205B5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D8CBA78325FA8510002205B5 /* StorageManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D8CBA78225FA84F5002205B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8CBA76825FA460E002205B5 /* CoreDataDemo.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8CBA78625FA879F002205B5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8CBA76325FA460E002205B5 /* TaskListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D8CBA78725FA87B0002205B5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D8CBA75F25FA460E002205B5 /* AppDelegate.swift */,
+				D8CBA76D25FA4610002205B5 /* LaunchScreen.storyboard */,
+				D8CBA77025FA4611002205B5 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D8CBA78925FA87D3002205B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8CBA76B25FA4610002205B5 /* Assets.xcassets */,
+				D8CBA78B25FAB605002205B5 /* Colors.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8CBA76425FA460E002205B5 /* TaskListViewController.swift in Sources */,
+				D8CBA78C25FAB605002205B5 /* Colors.swift in Sources */,
 				D8CBA76A25FA460E002205B5 /* CoreDataDemo.xcdatamodeld in Sources */,
-				D8CBA77E25FA4C35002205B5 /* NewTaskViewController.swift in Sources */,
 				D8CBA76025FA460E002205B5 /* AppDelegate.swift in Sources */,
+				D8CBA78425FA8510002205B5 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 493TY65FU6;
-				INFOPLIST_FILE = CoreDataDemo/Info.plist;
+				INFOPLIST_FILE = CoreDataDemo/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 493TY65FU6;
-				INFOPLIST_FILE = CoreDataDemo/Info.plist;
+				INFOPLIST_FILE = CoreDataDemo/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
