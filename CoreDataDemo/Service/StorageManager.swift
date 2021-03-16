@@ -13,7 +13,7 @@ class StorageManager {
     
     private init() {}
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "CoreDataDemo")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -23,8 +23,9 @@ class StorageManager {
         return container
     }()
     
-    private lazy var context = persistentContainer.viewContext
-
+    private var context: NSManagedObjectContext {
+        persistentContainer.viewContext
+    }
 
     func saveContext(onSuccess: () -> () = {}) {
         if context.hasChanges {
