@@ -67,19 +67,9 @@ class StorageManager {
     }
     
     func renameTask(_ task: Task, to newTaskName: String, onComplete: () -> ()) {
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "name = %@", task.name ?? "")
-        do {
-            let tasks = try context.fetch(fetchRequest)
-            guard let taskForUpdate = tasks.first else { return }
-            taskForUpdate.name = newTaskName
-            
-            saveContext() {
-                onComplete()
-            }
-        } catch let error {
-            print(error.localizedDescription)
+        task.name = newTaskName
+        saveContext() {
+            onComplete()
         }
     }
-    
 }
